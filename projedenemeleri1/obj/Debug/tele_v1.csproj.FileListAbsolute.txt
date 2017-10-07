@@ -16,3 +16,16 @@ C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\obj\Debug\t
 C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.exe
 C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.pdb
 C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\obj\Debug\tele_v1.csprojResolveAssemblyReference.cache
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\bin\Debug\projedenemeleri1.exe.config
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\bin\Debug\projedenemeleri1.exe
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\bin\Debug\projedenemeleri1.pdb
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\bin\Debug\WindowsBase.dll
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\obj\Debug\tele_v1.csprojResolveAssemblyReference.cache
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\obj\Debug\projedenemeleri1.config.resources
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\obj\Debug\projedenemeleri1.Form1.resources
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\obj\Debug\projedenemeleri1.Properties.Resources.resources
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\obj\Debug\projedenemeleri1.sensors.resources
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\obj\Debug\tele_v1.csproj.GenerateResource.Cache
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\obj\Debug\tele_v1.csproj.CoreCompileInputs.cache
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\obj\Debug\projedenemeleri1.exe
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\obj\Debug\projedenemeleri1.pdb

@@ -40,12 +40,12 @@
             this.label_basinc = new System.Windows.Forms.Label();
             this.label_isik = new System.Windows.Forms.Label();
             this.label_nem = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.x_label = new System.Windows.Forms.Label();
-            this.y_label = new System.Windows.Forms.Label();
-            this.kavrama_label = new System.Windows.Forms.Label();
-            this.z_label = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox_sensor_values = new System.Windows.Forms.GroupBox();
+            this.label_hand_x = new System.Windows.Forms.Label();
+            this.label_hand_y = new System.Windows.Forms.Label();
+            this.label_hand_grab = new System.Windows.Forms.Label();
+            this.label_hand_z = new System.Windows.Forms.Label();
+            this.button_connect = new System.Windows.Forms.Button();
             this.fingerr = new System.Windows.Forms.Label();
             this.fingerm = new System.Windows.Forms.Label();
             this.fingeri = new System.Windows.Forms.Label();
@@ -53,12 +53,12 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cameraBox = new Emgu.CV.UI.ImageBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_ipAdress = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.groupBox_tcpsettings = new System.Windows.Forms.GroupBox();
+            this.button_disconnect = new System.Windows.Forms.Button();
             this.fingerp = new System.Windows.Forms.Label();
-            this.fingertype = new System.Windows.Forms.Label();
+            this.label_hand_fingertype = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             this.sICAKLIKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sENSÖRDATAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fEEDBACKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_configuration = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.progressBar3 = new System.Windows.Forms.ProgressBar();
@@ -80,41 +80,41 @@
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
+            this.button_get_coordinate = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.trackBar6 = new System.Windows.Forms.TrackBar();
             this.trackBar5 = new System.Windows.Forms.TrackBar();
             this.trackBar4 = new System.Windows.Forms.TrackBar();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.label16 = new System.Windows.Forms.Label();
+            this.label_trackbar6 = new System.Windows.Forms.Label();
+            this.label_trackbar5 = new System.Windows.Forms.Label();
+            this.radioButton_cam_follow = new System.Windows.Forms.RadioButton();
+            this.radioButton_cam_rgb = new System.Windows.Forms.RadioButton();
+            this.label_trackbar4 = new System.Windows.Forms.Label();
             this.trackBar3 = new System.Windows.Forms.TrackBar();
-            this.label15 = new System.Windows.Forms.Label();
+            this.label_trackbar3 = new System.Windows.Forms.Label();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
-            this.label14 = new System.Windows.Forms.Label();
+            this.label_trackbar2 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.label13 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton_cam_thres = new System.Windows.Forms.RadioButton();
+            this.label_trackbar1 = new System.Windows.Forms.Label();
+            this.radioButton_cam_hsv = new System.Windows.Forms.RadioButton();
+            this.radioButton_cam_now = new System.Windows.Forms.RadioButton();
             this.label_baglanti_l = new System.Windows.Forms.Label();
             this.label_baglanti_d = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button_save_img = new System.Windows.Forms.Button();
+            this.button_clear_thres = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.cameraView)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.groupBox_sensor_values.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox3.SuspendLayout();
+            this.groupBox_tcpsettings.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -175,64 +175,64 @@
             this.label_nem.TabIndex = 7;
             this.label_nem.Text = "Nem :";
             // 
-            // groupBox1
+            // groupBox_sensor_values
             // 
-            this.groupBox1.Controls.Add(this.label_nem);
-            this.groupBox1.Controls.Add(this.label_isik);
-            this.groupBox1.Controls.Add(this.label_sicaklik);
-            this.groupBox1.Controls.Add(this.label_basinc);
-            this.groupBox1.Location = new System.Drawing.Point(488, 172);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(163, 115);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Sensör Değerleri";
+            this.groupBox_sensor_values.Controls.Add(this.label_nem);
+            this.groupBox_sensor_values.Controls.Add(this.label_isik);
+            this.groupBox_sensor_values.Controls.Add(this.label_sicaklik);
+            this.groupBox_sensor_values.Controls.Add(this.label_basinc);
+            this.groupBox_sensor_values.Location = new System.Drawing.Point(488, 172);
+            this.groupBox_sensor_values.Name = "groupBox_sensor_values";
+            this.groupBox_sensor_values.Size = new System.Drawing.Size(163, 115);
+            this.groupBox_sensor_values.TabIndex = 9;
+            this.groupBox_sensor_values.TabStop = false;
+            this.groupBox_sensor_values.Text = "Sensör Değerleri";
             // 
-            // x_label
+            // label_hand_x
             // 
-            this.x_label.AutoSize = true;
-            this.x_label.Location = new System.Drawing.Point(12, 18);
-            this.x_label.Name = "x_label";
-            this.x_label.Size = new System.Drawing.Size(20, 13);
-            this.x_label.TabIndex = 10;
-            this.x_label.Text = "X :";
+            this.label_hand_x.AutoSize = true;
+            this.label_hand_x.Location = new System.Drawing.Point(12, 18);
+            this.label_hand_x.Name = "label_hand_x";
+            this.label_hand_x.Size = new System.Drawing.Size(20, 13);
+            this.label_hand_x.TabIndex = 10;
+            this.label_hand_x.Text = "X :";
             // 
-            // y_label
+            // label_hand_y
             // 
-            this.y_label.AutoSize = true;
-            this.y_label.Location = new System.Drawing.Point(12, 40);
-            this.y_label.Name = "y_label";
-            this.y_label.Size = new System.Drawing.Size(17, 13);
-            this.y_label.TabIndex = 14;
-            this.y_label.Text = "Y:";
+            this.label_hand_y.AutoSize = true;
+            this.label_hand_y.Location = new System.Drawing.Point(12, 40);
+            this.label_hand_y.Name = "label_hand_y";
+            this.label_hand_y.Size = new System.Drawing.Size(17, 13);
+            this.label_hand_y.TabIndex = 14;
+            this.label_hand_y.Text = "Y:";
             // 
-            // kavrama_label
+            // label_hand_grab
             // 
-            this.kavrama_label.AutoSize = true;
-            this.kavrama_label.Location = new System.Drawing.Point(12, 84);
-            this.kavrama_label.Name = "kavrama_label";
-            this.kavrama_label.Size = new System.Drawing.Size(55, 13);
-            this.kavrama_label.TabIndex = 16;
-            this.kavrama_label.Text = "Kavrama: ";
+            this.label_hand_grab.AutoSize = true;
+            this.label_hand_grab.Location = new System.Drawing.Point(12, 84);
+            this.label_hand_grab.Name = "label_hand_grab";
+            this.label_hand_grab.Size = new System.Drawing.Size(55, 13);
+            this.label_hand_grab.TabIndex = 16;
+            this.label_hand_grab.Text = "Kavrama: ";
             // 
-            // z_label
+            // label_hand_z
             // 
-            this.z_label.AutoSize = true;
-            this.z_label.Location = new System.Drawing.Point(12, 62);
-            this.z_label.Name = "z_label";
-            this.z_label.Size = new System.Drawing.Size(17, 13);
-            this.z_label.TabIndex = 15;
-            this.z_label.Text = "Z:";
+            this.label_hand_z.AutoSize = true;
+            this.label_hand_z.Location = new System.Drawing.Point(12, 62);
+            this.label_hand_z.Name = "label_hand_z";
+            this.label_hand_z.Size = new System.Drawing.Size(17, 13);
+            this.label_hand_z.TabIndex = 15;
+            this.label_hand_z.Text = "Z:";
             // 
-            // button2
+            // button_connect
             // 
-            this.button2.Location = new System.Drawing.Point(11, 71);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(61, 23);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Başla";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.button_connect.Location = new System.Drawing.Point(11, 71);
+            this.button_connect.Name = "button_connect";
+            this.button_connect.Size = new System.Drawing.Size(61, 23);
+            this.button_connect.TabIndex = 21;
+            this.button_connect.Text = "Başla";
+            this.button_connect.UseVisualStyleBackColor = true;
+            this.button_connect.Click += new System.EventHandler(this.button_connect_Click);
             // 
             // fingerr
             // 
@@ -298,15 +298,14 @@
             this.pictureBox1.Size = new System.Drawing.Size(452, 282);
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // textBox1
+            // textBox_ipAdress
             // 
-            this.textBox1.Location = new System.Drawing.Point(11, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 20);
-            this.textBox1.TabIndex = 27;
-            this.textBox1.Text = "192.168.1.10";
+            this.textBox_ipAdress.Location = new System.Drawing.Point(11, 44);
+            this.textBox_ipAdress.Name = "textBox_ipAdress";
+            this.textBox_ipAdress.Size = new System.Drawing.Size(138, 20);
+            this.textBox_ipAdress.TabIndex = 27;
+            this.textBox_ipAdress.Text = "192.168.1.10";
             // 
             // label5
             // 
@@ -317,28 +316,28 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "IP ADRESİ:";
             // 
-            // groupBox3
+            // groupBox_tcpsettings
             // 
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Location = new System.Drawing.Point(488, 37);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(163, 100);
-            this.groupBox3.TabIndex = 29;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tcp Ayarlar";
+            this.groupBox_tcpsettings.Controls.Add(this.button_disconnect);
+            this.groupBox_tcpsettings.Controls.Add(this.label5);
+            this.groupBox_tcpsettings.Controls.Add(this.button_connect);
+            this.groupBox_tcpsettings.Controls.Add(this.textBox_ipAdress);
+            this.groupBox_tcpsettings.Location = new System.Drawing.Point(488, 37);
+            this.groupBox_tcpsettings.Name = "groupBox_tcpsettings";
+            this.groupBox_tcpsettings.Size = new System.Drawing.Size(163, 100);
+            this.groupBox_tcpsettings.TabIndex = 29;
+            this.groupBox_tcpsettings.TabStop = false;
+            this.groupBox_tcpsettings.Text = "Tcp Ayarlar";
             // 
-            // button4
+            // button_disconnect
             // 
-            this.button4.Location = new System.Drawing.Point(88, 71);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(61, 23);
-            this.button4.TabIndex = 29;
-            this.button4.Text = "Durdur";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.button_disconnect.Location = new System.Drawing.Point(88, 71);
+            this.button_disconnect.Name = "button_disconnect";
+            this.button_disconnect.Size = new System.Drawing.Size(61, 23);
+            this.button_disconnect.TabIndex = 29;
+            this.button_disconnect.Text = "Durdur";
+            this.button_disconnect.UseVisualStyleBackColor = true;
+            this.button_disconnect.Click += new System.EventHandler(this.button_disconnect_Click);
             // 
             // fingerp
             // 
@@ -349,22 +348,22 @@
             this.fingerp.TabIndex = 35;
             this.fingerp.Text = "Pinky: ";
             // 
-            // fingertype
+            // label_hand_fingertype
             // 
-            this.fingertype.AutoSize = true;
-            this.fingertype.Location = new System.Drawing.Point(12, 106);
-            this.fingertype.Name = "fingertype";
-            this.fingertype.Size = new System.Drawing.Size(49, 13);
-            this.fingertype.TabIndex = 36;
-            this.fingertype.Text = "Parmak: ";
+            this.label_hand_fingertype.AutoSize = true;
+            this.label_hand_fingertype.Location = new System.Drawing.Point(12, 106);
+            this.label_hand_fingertype.Name = "label_hand_fingertype";
+            this.label_hand_fingertype.Size = new System.Drawing.Size(49, 13);
+            this.label_hand_fingertype.TabIndex = 36;
+            this.label_hand_fingertype.Text = "Parmak: ";
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.x_label);
-            this.groupBox4.Controls.Add(this.fingertype);
-            this.groupBox4.Controls.Add(this.y_label);
-            this.groupBox4.Controls.Add(this.z_label);
-            this.groupBox4.Controls.Add(this.kavrama_label);
+            this.groupBox4.Controls.Add(this.label_hand_x);
+            this.groupBox4.Controls.Add(this.label_hand_fingertype);
+            this.groupBox4.Controls.Add(this.label_hand_y);
+            this.groupBox4.Controls.Add(this.label_hand_z);
+            this.groupBox4.Controls.Add(this.label_hand_grab);
             this.groupBox4.Location = new System.Drawing.Point(663, 37);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(200, 127);
@@ -422,7 +421,6 @@
             this.sENSÖRDATAToolStripMenuItem.Name = "sENSÖRDATAToolStripMenuItem";
             this.sENSÖRDATAToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.sENSÖRDATAToolStripMenuItem.Text = "SENSÖR DATA";
-            this.sENSÖRDATAToolStripMenuItem.Click += new System.EventHandler(this.sENSÖRDATAToolStripMenuItem_Click);
             // 
             // fEEDBACKToolStripMenuItem
             // 
@@ -430,15 +428,15 @@
             this.fEEDBACKToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
             this.fEEDBACKToolStripMenuItem.Text = "EL BİLGİLERİ";
             // 
-            // button1
+            // button_configuration
             // 
-            this.button1.Location = new System.Drawing.Point(488, 143);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 23);
-            this.button1.TabIndex = 42;
-            this.button1.Text = "Konfigirasyon";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button_configuration.Location = new System.Drawing.Point(488, 143);
+            this.button_configuration.Name = "button_configuration";
+            this.button_configuration.Size = new System.Drawing.Size(163, 23);
+            this.button_configuration.TabIndex = 42;
+            this.button_configuration.Text = "Konfigirasyon";
+            this.button_configuration.UseVisualStyleBackColor = true;
+            this.button_configuration.Click += new System.EventHandler(this.button_configuration_Click);
             // 
             // progressBar1
             // 
@@ -542,26 +540,26 @@
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.textBox2);
-            this.groupBox7.Controls.Add(this.button10);
+            this.groupBox7.Controls.Add(this.button_get_coordinate);
             this.groupBox7.Controls.Add(this.button9);
             this.groupBox7.Controls.Add(this.button8);
             this.groupBox7.Controls.Add(this.trackBar6);
             this.groupBox7.Controls.Add(this.trackBar5);
             this.groupBox7.Controls.Add(this.trackBar4);
-            this.groupBox7.Controls.Add(this.label18);
-            this.groupBox7.Controls.Add(this.label17);
-            this.groupBox7.Controls.Add(this.radioButton5);
-            this.groupBox7.Controls.Add(this.radioButton4);
-            this.groupBox7.Controls.Add(this.label16);
+            this.groupBox7.Controls.Add(this.label_trackbar6);
+            this.groupBox7.Controls.Add(this.label_trackbar5);
+            this.groupBox7.Controls.Add(this.radioButton_cam_follow);
+            this.groupBox7.Controls.Add(this.radioButton_cam_rgb);
+            this.groupBox7.Controls.Add(this.label_trackbar4);
             this.groupBox7.Controls.Add(this.trackBar3);
-            this.groupBox7.Controls.Add(this.label15);
+            this.groupBox7.Controls.Add(this.label_trackbar3);
             this.groupBox7.Controls.Add(this.trackBar2);
-            this.groupBox7.Controls.Add(this.label14);
+            this.groupBox7.Controls.Add(this.label_trackbar2);
             this.groupBox7.Controls.Add(this.trackBar1);
-            this.groupBox7.Controls.Add(this.radioButton3);
-            this.groupBox7.Controls.Add(this.label13);
-            this.groupBox7.Controls.Add(this.radioButton2);
-            this.groupBox7.Controls.Add(this.radioButton1);
+            this.groupBox7.Controls.Add(this.radioButton_cam_thres);
+            this.groupBox7.Controls.Add(this.label_trackbar1);
+            this.groupBox7.Controls.Add(this.radioButton_cam_hsv);
+            this.groupBox7.Controls.Add(this.radioButton_cam_now);
             this.groupBox7.Location = new System.Drawing.Point(12, 368);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(470, 207);
@@ -572,22 +570,22 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(150, 178);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(52, 20);
             this.textBox2.TabIndex = 20;
             this.textBox2.Text = "5";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // button10
+            // button_get_coordinate
             // 
-            this.button10.Location = new System.Drawing.Point(17, 178);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(96, 23);
-            this.button10.TabIndex = 19;
-            this.button10.Text = "Koordinat";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button_get_coordinate.Location = new System.Drawing.Point(17, 178);
+            this.button_get_coordinate.Name = "button_get_coordinate";
+            this.button_get_coordinate.Size = new System.Drawing.Size(96, 23);
+            this.button_get_coordinate.TabIndex = 19;
+            this.button_get_coordinate.Text = "Koordinat";
+            this.button_get_coordinate.UseVisualStyleBackColor = true;
+            this.button_get_coordinate.Click += new System.EventHandler(this.button_get_coordinates_Click);
             // 
             // button9
             // 
@@ -637,56 +635,54 @@
             this.trackBar4.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar4.Scroll += new System.EventHandler(this.trackBar4_Scroll);
             // 
-            // label18
+            // label_trackbar6
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(432, 150);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(13, 13);
-            this.label18.TabIndex = 16;
-            this.label18.Text = "0";
+            this.label_trackbar6.AutoSize = true;
+            this.label_trackbar6.Location = new System.Drawing.Point(432, 150);
+            this.label_trackbar6.Name = "label_trackbar6";
+            this.label_trackbar6.Size = new System.Drawing.Size(13, 13);
+            this.label_trackbar6.TabIndex = 16;
+            this.label_trackbar6.Text = "0";
             // 
-            // label17
+            // label_trackbar5
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(432, 122);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(13, 13);
-            this.label17.TabIndex = 15;
-            this.label17.Text = "0";
+            this.label_trackbar5.AutoSize = true;
+            this.label_trackbar5.Location = new System.Drawing.Point(432, 122);
+            this.label_trackbar5.Name = "label_trackbar5";
+            this.label_trackbar5.Size = new System.Drawing.Size(13, 13);
+            this.label_trackbar5.TabIndex = 15;
+            this.label_trackbar5.Text = "0";
             // 
-            // radioButton5
+            // radioButton_cam_follow
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(20, 98);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(52, 17);
-            this.radioButton5.TabIndex = 12;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Takip";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
+            this.radioButton_cam_follow.AutoSize = true;
+            this.radioButton_cam_follow.Location = new System.Drawing.Point(20, 98);
+            this.radioButton_cam_follow.Name = "radioButton_cam_follow";
+            this.radioButton_cam_follow.Size = new System.Drawing.Size(52, 17);
+            this.radioButton_cam_follow.TabIndex = 12;
+            this.radioButton_cam_follow.TabStop = true;
+            this.radioButton_cam_follow.Text = "Takip";
+            this.radioButton_cam_follow.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // radioButton_cam_rgb
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(20, 79);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(48, 17);
-            this.radioButton4.TabIndex = 11;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "RGB";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.radioButton_cam_rgb.AutoSize = true;
+            this.radioButton_cam_rgb.Location = new System.Drawing.Point(20, 79);
+            this.radioButton_cam_rgb.Name = "radioButton_cam_rgb";
+            this.radioButton_cam_rgb.Size = new System.Drawing.Size(48, 17);
+            this.radioButton_cam_rgb.TabIndex = 11;
+            this.radioButton_cam_rgb.TabStop = true;
+            this.radioButton_cam_rgb.Text = "RGB";
+            this.radioButton_cam_rgb.UseVisualStyleBackColor = true;
             // 
-            // label16
+            // label_trackbar4
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(432, 97);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(13, 13);
-            this.label16.TabIndex = 10;
-            this.label16.Text = "0";
+            this.label_trackbar4.AutoSize = true;
+            this.label_trackbar4.Location = new System.Drawing.Point(432, 97);
+            this.label_trackbar4.Name = "label_trackbar4";
+            this.label_trackbar4.Size = new System.Drawing.Size(13, 13);
+            this.label_trackbar4.TabIndex = 10;
+            this.label_trackbar4.Text = "0";
             // 
             // trackBar3
             // 
@@ -698,14 +694,14 @@
             this.trackBar3.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar3.Scroll += new System.EventHandler(this.trackBar3_Scroll);
             // 
-            // label15
+            // label_trackbar3
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(432, 72);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(13, 13);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "0";
+            this.label_trackbar3.AutoSize = true;
+            this.label_trackbar3.Location = new System.Drawing.Point(432, 72);
+            this.label_trackbar3.Name = "label_trackbar3";
+            this.label_trackbar3.Size = new System.Drawing.Size(13, 13);
+            this.label_trackbar3.TabIndex = 9;
+            this.label_trackbar3.Text = "0";
             // 
             // trackBar2
             // 
@@ -717,14 +713,14 @@
             this.trackBar2.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
             // 
-            // label14
+            // label_trackbar2
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(432, 47);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(13, 13);
-            this.label14.TabIndex = 8;
-            this.label14.Text = "0";
+            this.label_trackbar2.AutoSize = true;
+            this.label_trackbar2.Location = new System.Drawing.Point(432, 47);
+            this.label_trackbar2.Name = "label_trackbar2";
+            this.label_trackbar2.Size = new System.Drawing.Size(13, 13);
+            this.label_trackbar2.TabIndex = 8;
+            this.label_trackbar2.Text = "0";
             // 
             // trackBar1
             // 
@@ -736,48 +732,48 @@
             this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
-            // radioButton3
+            // radioButton_cam_thres
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(20, 61);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(72, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Threshold";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton_cam_thres.AutoSize = true;
+            this.radioButton_cam_thres.Location = new System.Drawing.Point(20, 61);
+            this.radioButton_cam_thres.Name = "radioButton_cam_thres";
+            this.radioButton_cam_thres.Size = new System.Drawing.Size(72, 17);
+            this.radioButton_cam_thres.TabIndex = 2;
+            this.radioButton_cam_thres.TabStop = true;
+            this.radioButton_cam_thres.Text = "Threshold";
+            this.radioButton_cam_thres.UseVisualStyleBackColor = true;
             // 
-            // label13
+            // label_trackbar1
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(432, 19);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(13, 13);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "0";
+            this.label_trackbar1.AutoSize = true;
+            this.label_trackbar1.Location = new System.Drawing.Point(432, 19);
+            this.label_trackbar1.Name = "label_trackbar1";
+            this.label_trackbar1.Size = new System.Drawing.Size(13, 13);
+            this.label_trackbar1.TabIndex = 7;
+            this.label_trackbar1.Text = "0";
             // 
-            // radioButton2
+            // radioButton_cam_hsv
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(20, 43);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(47, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "HSV";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton_cam_hsv.AutoSize = true;
+            this.radioButton_cam_hsv.Location = new System.Drawing.Point(20, 43);
+            this.radioButton_cam_hsv.Name = "radioButton_cam_hsv";
+            this.radioButton_cam_hsv.Size = new System.Drawing.Size(47, 17);
+            this.radioButton_cam_hsv.TabIndex = 1;
+            this.radioButton_cam_hsv.TabStop = true;
+            this.radioButton_cam_hsv.Text = "HSV";
+            this.radioButton_cam_hsv.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radioButton_cam_now
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(20, 25);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(48, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Anlık";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton_cam_now.AutoSize = true;
+            this.radioButton_cam_now.Checked = true;
+            this.radioButton_cam_now.Location = new System.Drawing.Point(20, 25);
+            this.radioButton_cam_now.Name = "radioButton_cam_now";
+            this.radioButton_cam_now.Size = new System.Drawing.Size(48, 17);
+            this.radioButton_cam_now.TabIndex = 0;
+            this.radioButton_cam_now.TabStop = true;
+            this.radioButton_cam_now.Text = "Anlık";
+            this.radioButton_cam_now.UseVisualStyleBackColor = true;
             // 
             // label_baglanti_l
             // 
@@ -799,27 +795,26 @@
             this.label_baglanti_d.Size = new System.Drawing.Size(66, 20);
             this.label_baglanti_d.TabIndex = 51;
             this.label_baglanti_d.Text = "Meşgul";
-            this.label_baglanti_d.Click += new System.EventHandler(this.label12_Click);
             // 
-            // button3
+            // button_save_img
             // 
-            this.button3.Location = new System.Drawing.Point(488, 376);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(163, 23);
-            this.button3.TabIndex = 52;
-            this.button3.Text = "Resim Kaydet";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.button_save_img.Location = new System.Drawing.Point(488, 376);
+            this.button_save_img.Name = "button_save_img";
+            this.button_save_img.Size = new System.Drawing.Size(163, 23);
+            this.button_save_img.TabIndex = 52;
+            this.button_save_img.Text = "Resim Kaydet";
+            this.button_save_img.UseVisualStyleBackColor = true;
+            this.button_save_img.Click += new System.EventHandler(this.buttonbutton_save_img_Click);
             // 
-            // button6
+            // button_clear_thres
             // 
-            this.button6.Location = new System.Drawing.Point(488, 434);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(163, 23);
-            this.button6.TabIndex = 54;
-            this.button6.Text = "Ayarları Sıfırla";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button_clear_thres.Location = new System.Drawing.Point(488, 434);
+            this.button_clear_thres.Name = "button_clear_thres";
+            this.button_clear_thres.Size = new System.Drawing.Size(163, 23);
+            this.button_clear_thres.TabIndex = 54;
+            this.button_clear_thres.Text = "Ayarları Sıfırla";
+            this.button_clear_thres.UseVisualStyleBackColor = true;
+            this.button_clear_thres.Click += new System.EventHandler(this.button_clear_thres_Click);
             // 
             // button5
             // 
@@ -904,30 +899,30 @@
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button_clear_thres);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button_save_img);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_configuration);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox_tcpsettings);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox_sensor_values);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Teletouch  GUI";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cameraView)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox_sensor_values.ResumeLayout(false);
+            this.groupBox_sensor_values.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.groupBox_tcpsettings.ResumeLayout(false);
+            this.groupBox_tcpsettings.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -959,30 +954,30 @@
         private System.Windows.Forms.Label label_basinc;
         private System.Windows.Forms.Label label_isik;
         private System.Windows.Forms.Label label_nem;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label x_label;
-        private System.Windows.Forms.Label y_label;
-        private System.Windows.Forms.Label kavrama_label;
-        private System.Windows.Forms.Label z_label;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox_sensor_values;
+        private System.Windows.Forms.Label label_hand_x;
+        private System.Windows.Forms.Label label_hand_y;
+        private System.Windows.Forms.Label label_hand_grab;
+        private System.Windows.Forms.Label label_hand_z;
+        private System.Windows.Forms.Button button_connect;
         private System.Windows.Forms.Label fingerr;
         private System.Windows.Forms.Label fingerm;
         private System.Windows.Forms.Label fingeri;
         private System.Windows.Forms.Label fingert;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_ipAdress;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox_tcpsettings;
         private System.Windows.Forms.Label fingerp;
-        private System.Windows.Forms.Label fingertype;
+        private System.Windows.Forms.Label label_hand_fingertype;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button_disconnect;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem sICAKLIKToolStripMenuItem;
         private Emgu.CV.UI.ImageBox cameraBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_configuration;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.ProgressBar progressBar3;
@@ -997,31 +992,31 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TrackBar trackBar2;
         private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton_cam_thres;
+        private System.Windows.Forms.RadioButton radioButton_cam_hsv;
+        private System.Windows.Forms.RadioButton radioButton_cam_now;
         private System.Windows.Forms.Label label_baglanti_l;
         private System.Windows.Forms.Label label_baglanti_d;
         private System.Windows.Forms.TrackBar trackBar3;
         private System.Windows.Forms.TrackBar trackBar4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button_save_img;
+        private System.Windows.Forms.Button button_clear_thres;
+        private System.Windows.Forms.Label label_trackbar4;
+        private System.Windows.Forms.Label label_trackbar3;
+        private System.Windows.Forms.Label label_trackbar2;
+        private System.Windows.Forms.Label label_trackbar1;
         private System.Windows.Forms.ToolStripMenuItem sENSÖRDATAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fEEDBACKToolStripMenuItem;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton_cam_follow;
+        private System.Windows.Forms.RadioButton radioButton_cam_rgb;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TrackBar trackBar6;
         private System.Windows.Forms.TrackBar trackBar5;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label_trackbar6;
+        private System.Windows.Forms.Label label_trackbar5;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button_get_coordinate;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.GroupBox groupBox8;

@@ -21,7 +21,7 @@ using System.Diagnostics;
 
 /// </TELETOUCH MAIN APP >
 /// 
-/// Version: 1.0.1
+/// Version: 1.0.2
 /// 
 /// 
  
@@ -37,54 +37,32 @@ namespace projedenemeleri1
         Controller leap_controller = new Controller();
         Frame leap_frame;
 
-       // ***************FINGER VARIABLES***************    
+       // ***************FINGER VARIABLES****************    
         float handposy, handposz;   
         int thumbangle, indexangle, middleangle, ringangle, pinkyangle, pick, handposx;
         double grab;
 
-
-
-
-
-        NetworkStream networkStream;
-        TcpClient clientSocket;
-
-
-       
-
-
-        int diff = 3;
-
-
-        private Image<Gray, Byte> m_imgThreshold;
-        int HueLow = 0;
-        int SatLow = 0;
-        int ValLow = 0;
-        int HueHigh = 0;
-        int SatHigh = 0;
-        int ValHigh = 0;
-
-        System.Threading.Timer detectTimer;
-
-        byte[] netdata;
-
-
-
-        //-------
+        //****************EmguCV Variables***************
         List<Triangle2DF> triangleList = new List<Triangle2DF>();
         List<MCvBox2D> boxList = new List<MCvBox2D>();
         Gray cannyThreshold = new Gray(180);
         Gray cannyThresholdLinking = new Gray(120);
         Gray circleAccumulatorThreshold = new Gray(120);
         Contour<System.Drawing.Point> currentContour;
-        Ellipse asd;
-
-        int graytresh1 = 39, graytresh2 = 10;
-
-        int contourarea = 250;
+        Ellipse ellipse;
+        int graytresh1 = 39, graytresh2 = 10, contourarea = 250;
         double contourperimeter = 0.05;
+        int HueLow, SatLow, ValLow, HueHigh, SatHigh, ValHigh = 0;
+        private Image<Gray, Byte> m_imgThreshold;
 
-       
+        //****************Socket Variables***************
+        NetworkStream networkStream;
+        TcpClient clientSocket;
+        byte[] netdata;
+        System.Threading.Timer detectTimer;
+
+
+        int diff = 3;
 
         public Form1()
         {
@@ -96,7 +74,12 @@ namespace projedenemeleri1
         private void Form1_Load(object sender, EventArgs e)
         {
             button_configuration.Enabled = false;
-            listBox1.Items.Add(DateTime.Now + " Teletouch GUI başlatıldı");
+            listBox1.Items.Add(DateTime.Now + " Teletouch GUI is started");
+
+            if (!leap_controller.IsConnected)
+            {
+                MessageBox.Show("Leap controller couldn't found","Plug your LEAP Controller",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
 
             prepareDetection();
 
@@ -105,7 +88,6 @@ namespace projedenemeleri1
             textBox2_TextChanged(null, null);
         }
 
-       
 
         private void prepareDetection()
         {
@@ -146,7 +128,9 @@ namespace projedenemeleri1
                     
 
                     var bytes = GetBytes(deger);
+
                     networkStream.Write(bytes, 0, bytes.GetLength(0));
+
                     handposy = 0;
                     handposz = 0;
                 }
@@ -154,14 +138,22 @@ namespace projedenemeleri1
 
         }
        
-        byte[] GetBytes(string str)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            byte[] bytes = new byte[str.Length * sizeof(char)];
-            System.Buffer.BlockCopy(str.ToCharArray(), 0, bytes, 0, bytes.Length);
-            return bytes;
+            int newVal;
+             if(Int32.TryParse(textBox2.Text, out newVal))
+            {
+                diff = newVal;
+            }
         }
 
-       
+        int getNewAngle(int oldAngle, int newAngle)
+        {
+            return Math.Abs(newAngle - oldAngle) > diff ? newAngle : oldAngle; 
+        }
+
+
+        #region TCP Functions
 
         private void clientRead()
         {
@@ -191,7 +183,7 @@ namespace projedenemeleri1
 
                         string message = System.Text.Encoding.UTF8.GetString(tmp_data, 0, sensorSize);
 
-                    
+
                         string[] splited = message.Split('/');
 
 
@@ -225,7 +217,7 @@ namespace projedenemeleri1
             });
 
         }
-       
+
         private byte[] ReadData(NetworkStream stream, int size) //Read from stream
         {
             byte[] result = new byte[size];
@@ -245,27 +237,7 @@ namespace projedenemeleri1
             return result;
         }
 
-       
-
-        
-      
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            int newVal;
-             if(Int32.TryParse(textBox2.Text, out newVal))
-            {
-                diff = newVal;
-            }
-        }
-
-        int getNewAngle(int oldAngle, int newAngle)
-        {
-            return Math.Abs(newAngle - oldAngle) > diff ? newAngle : oldAngle; 
-        }
-
-       
-
-
+        #endregion
 
 
         #region M_Functions
@@ -278,6 +250,13 @@ namespace projedenemeleri1
         private void addListbox(string message) // Adding Element to Logger
         {
             listBox1.Items.Add(DateTime.Now + " " + message);
+        }
+
+        byte[] GetBytes(string str) //Getting bytes from string
+        {
+            byte[] bytes = new byte[str.Length * sizeof(char)];
+            System.Buffer.BlockCopy(str.ToCharArray(), 0, bytes, 0, bytes.Length);
+            return bytes;
         }
 
         #endregion
@@ -484,7 +463,7 @@ namespace projedenemeleri1
                                 if (isRectangle)
                                 {
                                     boxList.Add(currentContour.GetMinAreaRect());
-                                    asd = new Ellipse(new PointF(currentContour[0].X, currentContour[0].Y), new SizeF(10, 10), 1);
+                                    ellipse = new Ellipse(new PointF(currentContour[0].X, currentContour[0].Y), new SizeF(10, 10), 1);
 
                                     Console.WriteLine(currentContour[1]);
                                 }
@@ -502,7 +481,7 @@ namespace projedenemeleri1
             foreach (MCvBox2D box in boxList)
                 triangleRectangleImage.Draw(box, new Bgr(Color.DarkOrange), 2);
 
-            triangleRectangleImage.Draw(asd, new Bgr(Color.DarkBlue), 3);
+            triangleRectangleImage.Draw(ellipse, new Bgr(Color.DarkBlue), 3);
             //MCvFont f= new MCvFont() 
             //triangleRectangleImage.Draw(currentContour[0].X.ToString()+ " " +currentContour[0].Y.ToString(),MCvFont)
             cameraBox.Image = triangleRectangleImage;

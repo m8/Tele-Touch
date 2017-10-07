@@ -1,0 +1,43 @@
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\projedenemeleri1\projedenemeleri1\bin\Debug\projedenemeleri1.exe.config
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\projedenemeleri1\projedenemeleri1\bin\Debug\projedenemeleri1.exe
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\projedenemeleri1\projedenemeleri1\bin\Debug\projedenemeleri1.pdb
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\projedenemeleri1\projedenemeleri1\bin\Debug\WindowsBase.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\projedenemeleri1\projedenemeleri1\obj\Debug\projedenemeleri1.config.resources
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\projedenemeleri1\projedenemeleri1\obj\Debug\projedenemeleri1.Form1.resources
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\projedenemeleri1\projedenemeleri1\obj\Debug\projedenemeleri1.Properties.Resources.resources
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\projedenemeleri1\projedenemeleri1\obj\Debug\projedenemeleri1.sensors.resources
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\projedenemeleri1\projedenemeleri1\obj\Debug\projedenemeleri1.csproj.GenerateResource.Cache
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\projedenemeleri1\projedenemeleri1\obj\Debug\projedenemeleri1.exe
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\projedenemeleri1\projedenemeleri1\obj\Debug\projedenemeleri1.pdb
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\projedenemeleri1\projedenemeleri1\obj\Debug\projedenemeleri1.csprojResolveAssemblyReference.cache
+C:\Users\Musa\Desktop\teletouch yeni\projedenemeleri1\bin\Debug\projedenemeleri1.exe.config
+C:\Users\Musa\Desktop\teletouch yeni\projedenemeleri1\bin\Debug\projedenemeleri1.exe
+C:\Users\Musa\Desktop\teletouch yeni\projedenemeleri1\bin\Debug\projedenemeleri1.pdb
+C:\Users\Musa\Desktop\teletouch yeni\projedenemeleri1\bin\Debug\WindowsBase.dll
+C:\Users\Musa\Desktop\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.csprojResolveAssemblyReference.cache
+C:\Users\Musa\Desktop\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.config.resources
+C:\Users\Musa\Desktop\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.Form1.resources
+C:\Users\Musa\Desktop\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.Properties.Resources.resources
+C:\Users\Musa\Desktop\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.sensors.resources
+C:\Users\Musa\Desktop\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.csproj.GenerateResource.Cache
+C:\Users\Musa\Desktop\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.csproj.CoreCompileInputs.cache
+C:\Users\Musa\Desktop\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.exe
+C:\Users\Musa\Desktop\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.pdb
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\bin\Debug\projedenemeleri1.exe.config
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\bin\Debug\projedenemeleri1.exe
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\bin\Debug\projedenemeleri1.pdb
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\bin\Debug\DirectShowLib-2005.dll
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\bin\Debug\Emgu.CV.dll
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\bin\Debug\Emgu.CV.UI.dll
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\bin\Debug\Emgu.Util.dll
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\bin\Debug\LeapCSharp.NET4.5.dll
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\bin\Debug\WindowsBase.dll
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.csprojResolveAssemblyReference.cache
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.config.resources
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.Form1.resources
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.Properties.Resources.resources
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.sensors.resources
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.csproj.GenerateResource.Cache
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.csproj.CoreCompileInputs.cache
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.exe
+C:\Users\Musa\Desktop\teletouch yeni\teletouch yeni\projedenemeleri1\obj\Debug\projedenemeleri1.pdb

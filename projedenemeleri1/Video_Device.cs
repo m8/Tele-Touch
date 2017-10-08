@@ -7,9 +7,9 @@ namespace projedenemeleri1
 {
     public struct Video_Device
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public Guid ClassID { get; set; }
+        public int video_device_Id { get; set; }
+        public string video_device_Name { get; set; }
+        public Guid video_device_ClassID { get; set; }
 
     }
 }

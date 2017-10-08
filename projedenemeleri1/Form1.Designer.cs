@@ -67,12 +67,12 @@
             this.sENSÖRDATAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fEEDBACKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button_configuration = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.progressBar3 = new System.Windows.Forms.ProgressBar();
-            this.progressBar4 = new System.Windows.Forms.ProgressBar();
-            this.progressBar5 = new System.Windows.Forms.ProgressBar();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.progressBar_thumb = new System.Windows.Forms.ProgressBar();
+            this.progressBar_index = new System.Windows.Forms.ProgressBar();
+            this.progressBar_ring = new System.Windows.Forms.ProgressBar();
+            this.progressBar_middle = new System.Windows.Forms.ProgressBar();
+            this.progressBar_pinky = new System.Windows.Forms.ProgressBar();
+            this.groupBox_finger_pressure = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -106,9 +106,9 @@
             this.button_clear_thres = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox_logger = new System.Windows.Forms.ListBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart_sensor_graphics = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.cameraView)).BeginInit();
             this.groupBox_sensor_values.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -118,7 +118,7 @@
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.groupBox_finger_pressure.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).BeginInit();
@@ -127,7 +127,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_sensor_graphics)).BeginInit();
             this.SuspendLayout();
             // 
             // cameraView
@@ -438,59 +438,59 @@
             this.button_configuration.UseVisualStyleBackColor = true;
             this.button_configuration.Click += new System.EventHandler(this.button_configuration_Click);
             // 
-            // progressBar1
+            // progressBar_thumb
             // 
-            this.progressBar1.Location = new System.Drawing.Point(56, 22);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(129, 23);
-            this.progressBar1.TabIndex = 43;
+            this.progressBar_thumb.Location = new System.Drawing.Point(56, 22);
+            this.progressBar_thumb.Name = "progressBar_thumb";
+            this.progressBar_thumb.Size = new System.Drawing.Size(129, 23);
+            this.progressBar_thumb.TabIndex = 43;
             // 
-            // progressBar2
+            // progressBar_index
             // 
-            this.progressBar2.Location = new System.Drawing.Point(56, 51);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(129, 23);
-            this.progressBar2.TabIndex = 44;
+            this.progressBar_index.Location = new System.Drawing.Point(56, 51);
+            this.progressBar_index.Name = "progressBar_index";
+            this.progressBar_index.Size = new System.Drawing.Size(129, 23);
+            this.progressBar_index.TabIndex = 44;
             // 
-            // progressBar3
+            // progressBar_ring
             // 
-            this.progressBar3.Location = new System.Drawing.Point(56, 109);
-            this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(129, 23);
-            this.progressBar3.TabIndex = 46;
+            this.progressBar_ring.Location = new System.Drawing.Point(56, 109);
+            this.progressBar_ring.Name = "progressBar_ring";
+            this.progressBar_ring.Size = new System.Drawing.Size(129, 23);
+            this.progressBar_ring.TabIndex = 46;
             // 
-            // progressBar4
+            // progressBar_middle
             // 
-            this.progressBar4.Location = new System.Drawing.Point(56, 80);
-            this.progressBar4.Name = "progressBar4";
-            this.progressBar4.Size = new System.Drawing.Size(129, 23);
-            this.progressBar4.TabIndex = 45;
+            this.progressBar_middle.Location = new System.Drawing.Point(56, 80);
+            this.progressBar_middle.Name = "progressBar_middle";
+            this.progressBar_middle.Size = new System.Drawing.Size(129, 23);
+            this.progressBar_middle.TabIndex = 45;
             // 
-            // progressBar5
+            // progressBar_pinky
             // 
-            this.progressBar5.Location = new System.Drawing.Point(56, 138);
-            this.progressBar5.Name = "progressBar5";
-            this.progressBar5.Size = new System.Drawing.Size(129, 23);
-            this.progressBar5.TabIndex = 47;
+            this.progressBar_pinky.Location = new System.Drawing.Point(56, 138);
+            this.progressBar_pinky.Name = "progressBar_pinky";
+            this.progressBar_pinky.Size = new System.Drawing.Size(129, 23);
+            this.progressBar_pinky.TabIndex = 47;
             // 
-            // groupBox6
+            // groupBox_finger_pressure
             // 
-            this.groupBox6.Controls.Add(this.label6);
-            this.groupBox6.Controls.Add(this.label7);
-            this.groupBox6.Controls.Add(this.progressBar4);
-            this.groupBox6.Controls.Add(this.label8);
-            this.groupBox6.Controls.Add(this.progressBar5);
-            this.groupBox6.Controls.Add(this.label9);
-            this.groupBox6.Controls.Add(this.progressBar1);
-            this.groupBox6.Controls.Add(this.label10);
-            this.groupBox6.Controls.Add(this.progressBar3);
-            this.groupBox6.Controls.Add(this.progressBar2);
-            this.groupBox6.Location = new System.Drawing.Point(663, 308);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(200, 179);
-            this.groupBox6.TabIndex = 48;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Parmak Basınçları";
+            this.groupBox_finger_pressure.Controls.Add(this.label6);
+            this.groupBox_finger_pressure.Controls.Add(this.label7);
+            this.groupBox_finger_pressure.Controls.Add(this.progressBar_middle);
+            this.groupBox_finger_pressure.Controls.Add(this.label8);
+            this.groupBox_finger_pressure.Controls.Add(this.progressBar_pinky);
+            this.groupBox_finger_pressure.Controls.Add(this.label9);
+            this.groupBox_finger_pressure.Controls.Add(this.progressBar_thumb);
+            this.groupBox_finger_pressure.Controls.Add(this.label10);
+            this.groupBox_finger_pressure.Controls.Add(this.progressBar_ring);
+            this.groupBox_finger_pressure.Controls.Add(this.progressBar_index);
+            this.groupBox_finger_pressure.Location = new System.Drawing.Point(663, 308);
+            this.groupBox_finger_pressure.Name = "groupBox_finger_pressure";
+            this.groupBox_finger_pressure.Size = new System.Drawing.Size(200, 179);
+            this.groupBox_finger_pressure.TabIndex = 48;
+            this.groupBox_finger_pressure.TabStop = false;
+            this.groupBox_finger_pressure.Text = "Parmak Basınçları";
             // 
             // label6
             // 
@@ -834,14 +834,14 @@
             this.button7.Text = "Ayarları Sıfırla";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // listBox_logger
             // 
-            this.listBox1.AllowDrop = true;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(488, 492);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(375, 82);
-            this.listBox1.TabIndex = 56;
+            this.listBox_logger.AllowDrop = true;
+            this.listBox_logger.FormattingEnabled = true;
+            this.listBox_logger.Location = new System.Drawing.Point(488, 492);
+            this.listBox_logger.Name = "listBox_logger";
+            this.listBox_logger.Size = new System.Drawing.Size(375, 82);
+            this.listBox_logger.TabIndex = 56;
             // 
             // groupBox8
             // 
@@ -853,15 +853,15 @@
             this.groupBox8.TabIndex = 57;
             this.groupBox8.TabStop = false;
             // 
-            // chart1
+            // chart_sensor_graphics
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart_sensor_graphics.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(12, 581);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            this.chart_sensor_graphics.Legends.Add(legend1);
+            this.chart_sensor_graphics.Location = new System.Drawing.Point(12, 581);
+            this.chart_sensor_graphics.Name = "chart_sensor_graphics";
+            this.chart_sensor_graphics.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
@@ -882,28 +882,28 @@
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series4.Legend = "Legend1";
             series4.Name = "Işık";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Series.Add(series3);
-            this.chart1.Series.Add(series4);
-            this.chart1.Size = new System.Drawing.Size(851, 101);
-            this.chart1.TabIndex = 58;
-            this.chart1.Text = "chart1";
+            this.chart_sensor_graphics.Series.Add(series1);
+            this.chart_sensor_graphics.Series.Add(series2);
+            this.chart_sensor_graphics.Series.Add(series3);
+            this.chart_sensor_graphics.Series.Add(series4);
+            this.chart_sensor_graphics.Size = new System.Drawing.Size(851, 101);
+            this.chart_sensor_graphics.TabIndex = 58;
+            this.chart_sensor_graphics.Text = "chart1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(879, 696);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.chart_sensor_graphics);
             this.Controls.Add(this.groupBox8);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBox_logger);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button_clear_thres);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button_save_img);
             this.Controls.Add(this.groupBox7);
-            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.groupBox_finger_pressure);
             this.Controls.Add(this.button_configuration);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox5);
@@ -929,8 +929,8 @@
             this.groupBox5.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.groupBox_finger_pressure.ResumeLayout(false);
+            this.groupBox_finger_pressure.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).EndInit();
@@ -941,7 +941,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_sensor_graphics)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -978,12 +978,12 @@
         private System.Windows.Forms.ToolStripMenuItem sICAKLIKToolStripMenuItem;
         private Emgu.CV.UI.ImageBox cameraBox;
         private System.Windows.Forms.Button button_configuration;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.ProgressBar progressBar2;
-        private System.Windows.Forms.ProgressBar progressBar3;
-        private System.Windows.Forms.ProgressBar progressBar4;
-        private System.Windows.Forms.ProgressBar progressBar5;
-        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.ProgressBar progressBar_thumb;
+        private System.Windows.Forms.ProgressBar progressBar_index;
+        private System.Windows.Forms.ProgressBar progressBar_ring;
+        private System.Windows.Forms.ProgressBar progressBar_middle;
+        private System.Windows.Forms.ProgressBar progressBar_pinky;
+        private System.Windows.Forms.GroupBox groupBox_finger_pressure;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -1015,12 +1015,12 @@
         private System.Windows.Forms.Label label_trackbar6;
         private System.Windows.Forms.Label label_trackbar5;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox_logger;
         private System.Windows.Forms.Button button_get_coordinate;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_sensor_graphics;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
     }

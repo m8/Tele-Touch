@@ -29,3 +29,8 @@ C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\obj\Debug\tele_v1.csp
 C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\obj\Debug\tele_v1.csproj.CoreCompileInputs.cache
 C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\obj\Debug\projedenemeleri1.exe
 C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\obj\Debug\projedenemeleri1.pdb
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\bin\Debug\DirectShowLib-2005.dll
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\bin\Debug\Emgu.CV.dll
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\bin\Debug\Emgu.CV.UI.dll
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\bin\Debug\Emgu.Util.dll
+C:\Users\Musa\Desktop\tele-touch-main-app\projedenemeleri1\bin\Debug\LeapCSharp.NET4.5.dll

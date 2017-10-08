@@ -8,15 +8,15 @@ namespace projedenemeleri1
 {
     class data
     {
-        public static int temp { get; set; }
-        public static int lighti { get; set; }
-        public static int pres { get; set; }
-        public static int humidty { get; set; }
-        public static int fthumb { get; set; }
-        public static int findex { get; set; }
-        public static int fmiddle { get; set; }
-        public static int fring { get; set; }
-        public static int fpinky { get; set; }
+        public static int sensor_temp { get; set; }
+        public static int sensor_light_i { get; set; }
+        public static int sensor_pressure { get; set; }
+        public static int sensor_humidty { get; set; }
+        public static int sensor_force_thumb { get; set; }
+        public static int sensor_force_index { get; set; }
+        public static int sensor_force_middle { get; set; }
+        public static int sensor_force_ring { get; set; }
+        public static int sensor_force_pinky { get; set; }
 
 
     }

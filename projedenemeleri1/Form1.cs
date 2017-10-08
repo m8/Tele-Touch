@@ -8,20 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Emgu.CV;
-using Emgu.Util;
-using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
-using DirectShowLib;
-using System.Runtime.InteropServices;
 using System.Net.Sockets;
 using Leap;
-using System.Windows;
 using System.Drawing.Imaging;
-using System.Diagnostics;
 
 /// </TELETOUCH MAIN APP >
 /// 
-/// Version: 1.0.2
+/// Version: 1.0.3
 /// 
 /// 
  
@@ -74,7 +68,7 @@ namespace projedenemeleri1
         private void Form1_Load(object sender, EventArgs e)
         {
             button_configuration.Enabled = false;
-            listBox1.Items.Add(DateTime.Now + " Teletouch GUI is started");
+            listBox_logger.Items.Add(DateTime.Now + " Teletouch GUI is started");
 
             if (!leap_controller.IsConnected)
             {
@@ -153,9 +147,11 @@ namespace projedenemeleri1
         }
 
 
+
+
         #region TCP Functions
 
-        private void clientRead()
+        private void clientRead() //Get camera and sensor values from Raspberry
         {
             Task.Run(() =>
             {
@@ -171,15 +167,15 @@ namespace projedenemeleri1
                         var networkStream = clientSocket.GetStream();
                         byte[] tmp_data;
 
-                        tmp_data = ReadData(networkStream, 4);
+                        tmp_data = networkStreamtoByte(networkStream, 4);
                         int pictureSize = BitConverter.ToInt32(tmp_data, 0);
-                        netdata = ReadData(networkStream, pictureSize);
+                        netdata = networkStreamtoByte(networkStream, pictureSize);
 
-                        radio_checked();
+                        radioCheckedImageChange();
 
-                        tmp_data = ReadData(networkStream, 4);
+                        tmp_data = networkStreamtoByte(networkStream, 4);
                         int sensorSize = BitConverter.ToInt32(tmp_data, 0);
-                        tmp_data = ReadData(networkStream, sensorSize);
+                        tmp_data = networkStreamtoByte(networkStream, sensorSize);
 
                         string message = System.Text.Encoding.UTF8.GetString(tmp_data, 0, sensorSize);
 
@@ -191,25 +187,25 @@ namespace projedenemeleri1
                             splited[2] != null && splited[3] != null && splited[4] != null)
                         {
 
-                            data.temp = Convert.ToInt32(splited[0]);
-                            data.pres = Convert.ToInt32(splited[1]);
-                            data.humidty = Convert.ToInt32(splited[2]);
-                            data.lighti = Convert.ToInt32(splited[3]);
-                            data.findex = Convert.ToInt32(splited[4]);
+                            data.sensor_temp = Convert.ToInt32(splited[0]);
+                            data.sensor_pressure = Convert.ToInt32(splited[1]);
+                            data.sensor_humidty = Convert.ToInt32(splited[2]);
+                            data.sensor_light_i = Convert.ToInt32(splited[3]);
+                            data.sensor_force_index = Convert.ToInt32(splited[4]);
 
 
-                            chart1.Series["Sıcaklık"].Points.AddY(data.temp);
-                            chart1.Series["Nem"].Points.AddY(data.humidty);
-                            chart1.Series["Basınç"].Points.AddY(data.pres);
-                            chart1.Series["Işık"].Points.AddY(data.lighti);
+                            chart_sensor_graphics.Series["Sıcaklık"].Points.AddY(data.sensor_temp);
+                            chart_sensor_graphics.Series["Nem"].Points.AddY(data.sensor_humidty);
+                            chart_sensor_graphics.Series["Basınç"].Points.AddY(data.sensor_pressure);
+                            chart_sensor_graphics.Series["Işık"].Points.AddY(data.sensor_light_i);
 
 
-                            write_to_label(label_sicaklik, "Sıcaklık: " + data.temp.ToString());
-                            write_to_label(label_basinc, "Sıcaklık: " + data.pres.ToString());
-                            write_to_label(label_nem, "Nem: " + data.humidty.ToString());
-                            write_to_label(label_isik, "Işık: " + data.lighti.ToString());
+                            write_to_label(label_sicaklik, "Sıcaklık: " + data.sensor_temp.ToString());
+                            write_to_label(label_basinc, "Sıcaklık: " + data.sensor_pressure.ToString());
+                            write_to_label(label_nem, "Nem: " + data.sensor_humidty.ToString());
+                            write_to_label(label_isik, "Işık: " + data.sensor_light_i.ToString());
 
-                            progressBar2.Value = data.findex;
+                            progressBar_index.Value = data.sensor_force_index;
 
                         }
                     }
@@ -218,7 +214,7 @@ namespace projedenemeleri1
 
         }
 
-        private byte[] ReadData(NetworkStream stream, int size) //Read from stream
+        private byte[] networkStreamtoByte(NetworkStream stream, int size) //Read from stream
         {
             byte[] result = new byte[size];
 
@@ -229,9 +225,9 @@ namespace projedenemeleri1
                 int oldReadByte = readByte;
                 int newRead = stream.Read(tmp, 0, size - readByte);
                 readByte += newRead;
-                byte[] qq = tmp.Take(newRead).ToArray();
-                qq.CopyTo(result, oldReadByte);
-                qq = null;
+                byte[] last_val = tmp.Take(newRead).ToArray();
+                last_val.CopyTo(result, oldReadByte);
+                last_val = null;
                 tmp = null;
             }
             return result;
@@ -249,7 +245,7 @@ namespace projedenemeleri1
 
         private void addListbox(string message) // Adding Element to Logger
         {
-            listBox1.Items.Add(DateTime.Now + " " + message);
+            listBox_logger.Items.Add(DateTime.Now + " " + message);
         }
 
         byte[] GetBytes(string str) //Getting bytes from string
@@ -374,7 +370,7 @@ namespace projedenemeleri1
             string ipadress = textBox_ipAdress.Text;
             clientSocket = new TcpClient(ipadress, 8001);
             networkStream = clientSocket.GetStream();
-            listBox1.Items.Add(DateTime.Now + " " + textBox_ipAdress.Text + " adresine bağlanılıyor");
+            listBox_logger.Items.Add(DateTime.Now + " " + textBox_ipAdress.Text + " adresine bağlanılıyor");
 
         }
 
@@ -387,11 +383,11 @@ namespace projedenemeleri1
 
         private void button_get_coordinates_Click(object sender, EventArgs e) // Get coordinates of the square
         {
-            listBox1.Items.Add(DateTime.Now + "Anlık Koordinatlar: ");
+            listBox_logger.Items.Add(DateTime.Now + "Anlık Koordinatlar: ");
             for (int i = 0; i < 4; i++)
             {
                 String sendmessage = "X: " + currentContour[i].X.ToString() + "," + "Y: " + currentContour[i].Y.ToString();
-                listBox1.Items.Add(sendmessage);
+                listBox_logger.Items.Add(sendmessage);
                 sendmessage = "";
             }
         }
@@ -499,7 +495,7 @@ namespace projedenemeleri1
 
         }
 
-        private void radio_checked() //Changing image colors or thres
+        private void radioCheckedImageChange() //Changing image colors or thres
         {
             if (radioButton_cam_now.Checked)
             {

@@ -303,7 +303,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "sensors";
             this.Text = "sensors";
-            this.Load += new System.EventHandler(this.sensors_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.sensors_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

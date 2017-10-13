@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.cameraView = new Emgu.CV.UI.ImageBox();
             this.label_sicaklik = new System.Windows.Forms.Label();
@@ -146,36 +146,36 @@
             this.label_sicaklik.AutoSize = true;
             this.label_sicaklik.Location = new System.Drawing.Point(6, 22);
             this.label_sicaklik.Name = "label_sicaklik";
-            this.label_sicaklik.Size = new System.Drawing.Size(50, 13);
+            this.label_sicaklik.Size = new System.Drawing.Size(73, 13);
             this.label_sicaklik.TabIndex = 5;
-            this.label_sicaklik.Text = "Sıcaklık: ";
+            this.label_sicaklik.Text = "Temperature: ";
             // 
             // label_basinc
             // 
             this.label_basinc.AutoSize = true;
             this.label_basinc.Location = new System.Drawing.Point(6, 44);
             this.label_basinc.Name = "label_basinc";
-            this.label_basinc.Size = new System.Drawing.Size(45, 13);
+            this.label_basinc.Size = new System.Drawing.Size(54, 13);
             this.label_basinc.TabIndex = 6;
-            this.label_basinc.Text = "Basınç: ";
+            this.label_basinc.Text = "Pressure: ";
             // 
             // label_isik
             // 
             this.label_isik.AutoSize = true;
             this.label_isik.Location = new System.Drawing.Point(6, 88);
             this.label_isik.Name = "label_isik";
-            this.label_isik.Size = new System.Drawing.Size(26, 13);
+            this.label_isik.Size = new System.Drawing.Size(45, 13);
             this.label_isik.TabIndex = 8;
-            this.label_isik.Text = "Işık:";
+            this.label_isik.Text = "Light In:";
             // 
             // label_nem
             // 
             this.label_nem.AutoSize = true;
             this.label_nem.Location = new System.Drawing.Point(6, 66);
             this.label_nem.Name = "label_nem";
-            this.label_nem.Size = new System.Drawing.Size(35, 13);
+            this.label_nem.Size = new System.Drawing.Size(53, 13);
             this.label_nem.TabIndex = 7;
-            this.label_nem.Text = "Nem :";
+            this.label_nem.Text = "Humidity :";
             // 
             // groupBox_sensor_values
             // 
@@ -188,7 +188,7 @@
             this.groupBox_sensor_values.Size = new System.Drawing.Size(163, 115);
             this.groupBox_sensor_values.TabIndex = 9;
             this.groupBox_sensor_values.TabStop = false;
-            this.groupBox_sensor_values.Text = "Sensör Değerleri";
+            this.groupBox_sensor_values.Text = "Sensor Values";
             // 
             // label_hand_x
             // 
@@ -232,7 +232,7 @@
             this.button_connect.Name = "button_connect";
             this.button_connect.Size = new System.Drawing.Size(61, 23);
             this.button_connect.TabIndex = 21;
-            this.button_connect.Text = "Başla";
+            this.button_connect.Text = "Start";
             this.button_connect.UseVisualStyleBackColor = true;
             this.button_connect.Click += new System.EventHandler(this.button_connect_Click);
             // 
@@ -282,7 +282,7 @@
             this.groupBox2.Size = new System.Drawing.Size(473, 325);
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "GÖRÜNTÜ";
+            this.groupBox2.Text = "CAMERA";
             // 
             // cameraBox
             // 
@@ -314,9 +314,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(9, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 13);
+            this.label5.Size = new System.Drawing.Size(64, 13);
             this.label5.TabIndex = 28;
-            this.label5.Text = "IP ADRESİ:";
+            this.label5.Text = "IP ADRESS";
             // 
             // groupBox_tcpsettings
             // 
@@ -329,7 +329,7 @@
             this.groupBox_tcpsettings.Size = new System.Drawing.Size(163, 100);
             this.groupBox_tcpsettings.TabIndex = 29;
             this.groupBox_tcpsettings.TabStop = false;
-            this.groupBox_tcpsettings.Text = "Tcp Ayarlar";
+            this.groupBox_tcpsettings.Text = "TCP Settings";
             // 
             // button_disconnect
             // 
@@ -337,7 +337,7 @@
             this.button_disconnect.Name = "button_disconnect";
             this.button_disconnect.Size = new System.Drawing.Size(61, 23);
             this.button_disconnect.TabIndex = 29;
-            this.button_disconnect.Text = "Durdur";
+            this.button_disconnect.Text = "Stop";
             this.button_disconnect.UseVisualStyleBackColor = true;
             this.button_disconnect.Click += new System.EventHandler(this.button_disconnect_Click);
             // 
@@ -444,7 +444,7 @@
             this.button_configuration.Name = "button_configuration";
             this.button_configuration.Size = new System.Drawing.Size(163, 23);
             this.button_configuration.TabIndex = 42;
-            this.button_configuration.Text = "Konfigirasyon";
+            this.button_configuration.Text = "Configuration";
             this.button_configuration.UseVisualStyleBackColor = true;
             this.button_configuration.Click += new System.EventHandler(this.button_configuration_Click);
             // 
@@ -866,37 +866,37 @@
             // 
             // chart_sensor_graphics
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart_sensor_graphics.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart_sensor_graphics.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart_sensor_graphics.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart_sensor_graphics.Legends.Add(legend1);
             this.chart_sensor_graphics.Location = new System.Drawing.Point(12, 581);
             this.chart_sensor_graphics.Name = "chart_sensor_graphics";
             this.chart_sensor_graphics.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Legend = "Legend1";
-            series5.MarkerBorderColor = System.Drawing.Color.White;
-            series5.MarkerColor = System.Drawing.Color.White;
-            series5.MarkerImageTransparentColor = System.Drawing.Color.White;
-            series5.Name = "Sıcaklık";
-            series5.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Legend = "Legend1";
-            series6.Name = "Nem";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.Legend = "Legend1";
-            series7.Name = "Basınç";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.Legend = "Legend1";
-            series8.Name = "Işık";
-            this.chart_sensor_graphics.Series.Add(series5);
-            this.chart_sensor_graphics.Series.Add(series6);
-            this.chart_sensor_graphics.Series.Add(series7);
-            this.chart_sensor_graphics.Series.Add(series8);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.MarkerBorderColor = System.Drawing.Color.White;
+            series1.MarkerColor = System.Drawing.Color.White;
+            series1.MarkerImageTransparentColor = System.Drawing.Color.White;
+            series1.Name = "Sıcaklık";
+            series1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Nem";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "Basınç";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "Işık";
+            this.chart_sensor_graphics.Series.Add(series1);
+            this.chart_sensor_graphics.Series.Add(series2);
+            this.chart_sensor_graphics.Series.Add(series3);
+            this.chart_sensor_graphics.Series.Add(series4);
             this.chart_sensor_graphics.Size = new System.Drawing.Size(851, 101);
             this.chart_sensor_graphics.TabIndex = 58;
             this.chart_sensor_graphics.Text = "chart1";

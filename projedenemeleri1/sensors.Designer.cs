@@ -40,6 +40,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(sensors));
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,6 +59,16 @@
             this.label9 = new System.Windows.Forms.Label();
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label10 = new System.Windows.Forms.Label();
+            this.button_stop = new System.Windows.Forms.Button();
+            this.button_excel = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel_paket_y = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel_paket_g = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.button_datapms = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button_clean_charts = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -66,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // chart1
@@ -292,17 +304,111 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Şiddet(10)";
             // 
+            // button_stop
+            // 
+            this.button_stop.Location = new System.Drawing.Point(12, 515);
+            this.button_stop.Name = "button_stop";
+            this.button_stop.Size = new System.Drawing.Size(172, 23);
+            this.button_stop.TabIndex = 10;
+            this.button_stop.Text = "Stop";
+            this.button_stop.UseVisualStyleBackColor = true;
+            this.button_stop.Click += new System.EventHandler(this.button_stop_Click);
+            // 
+            // button_excel
+            // 
+            this.button_excel.Location = new System.Drawing.Point(12, 544);
+            this.button_excel.Name = "button_excel";
+            this.button_excel.Size = new System.Drawing.Size(172, 23);
+            this.button_excel.TabIndex = 11;
+            this.button_excel.Text = "Export Excel";
+            this.button_excel.UseVisualStyleBackColor = true;
+            this.button_excel.Click += new System.EventHandler(this.button_excel_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel_paket_y,
+            this.toolStripStatusLabel_paket_g,
+            this.toolStripStatusLabel1,
+            this.toolStripProgressBar1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 581);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1034, 22);
+            this.statusStrip1.TabIndex = 12;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel_paket_y
+            // 
+            this.toolStripStatusLabel_paket_y.Name = "toolStripStatusLabel_paket_y";
+            this.toolStripStatusLabel_paket_y.Size = new System.Drawing.Size(98, 17);
+            this.toolStripStatusLabel_paket_y.Text = "Packet Received: ";
+            // 
+            // toolStripStatusLabel_paket_g
+            // 
+            this.toolStripStatusLabel_paket_g.AutoSize = false;
+            this.toolStripStatusLabel_paket_g.Name = "toolStripStatusLabel_paket_g";
+            this.toolStripStatusLabel_paket_g.Size = new System.Drawing.Size(103, 17);
+            this.toolStripStatusLabel_paket_g.Text = "0                              ";
+            this.toolStripStatusLabel_paket_g.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(39, 17);
+            this.toolStripStatusLabel1.Text = "Status";
+            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            // 
+            // toolStripProgressBar1
+            // 
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
+            // 
+            // button_datapms
+            // 
+            this.button_datapms.Location = new System.Drawing.Point(232, 515);
+            this.button_datapms.Name = "button_datapms";
+            this.button_datapms.Size = new System.Drawing.Size(172, 23);
+            this.button_datapms.TabIndex = 13;
+            this.button_datapms.Text = "Set As Per/MSecond";
+            this.button_datapms.UseVisualStyleBackColor = true;
+            this.button_datapms.Click += new System.EventHandler(this.button_datapms_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(410, 517);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(92, 20);
+            this.textBox1.TabIndex = 14;
+            this.textBox1.Text = "1000";
+            // 
+            // button_clean_charts
+            // 
+            this.button_clean_charts.Location = new System.Drawing.Point(232, 544);
+            this.button_clean_charts.Name = "button_clean_charts";
+            this.button_clean_charts.Size = new System.Drawing.Size(172, 23);
+            this.button_clean_charts.TabIndex = 15;
+            this.button_clean_charts.Text = "Clean Charts";
+            this.button_clean_charts.UseVisualStyleBackColor = true;
+            this.button_clean_charts.Click += new System.EventHandler(this.button_clean_charts_Click);
+            // 
             // sensors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 603);
+            this.Controls.Add(this.button_clean_charts);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button_datapms);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.button_excel);
+            this.Controls.Add(this.button_stop);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "sensors";
-            this.Text = "sensors";
+            this.Text = "Sensors";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.sensors_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -316,7 +422,10 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -340,8 +449,15 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-
-
-
+        private System.Windows.Forms.Button button_stop;
+        private System.Windows.Forms.Button button_excel;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_paket_y;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_paket_g;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.Button button_datapms;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button_clean_charts;
     }
 }

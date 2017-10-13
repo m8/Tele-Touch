@@ -15,7 +15,7 @@ using System.Drawing.Imaging;
 
 /// </TELETOUCH MAIN APP >
 /// 
-/// Version: 1.0.3
+/// Version: 1.0.4
 /// 
 /// 
  

@@ -381,6 +381,18 @@ namespace projedenemeleri1
 
         }
 
+        private void button_comp_settings_Click(object sender, EventArgs e)
+        {
+            com_setting com_page = new com_setting();
+            com_page.Show();
+        }
+
+        private void tESTARAYUZUToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tele_test test_interface = new tele_test();
+            test_interface.Show();
+        }
+
         private void button_get_coordinates_Click(object sender, EventArgs e) // Get coordinates of the square
         {
             listBox_logger.Items.Add(DateTime.Now + "Anlık Koordinatlar: ");

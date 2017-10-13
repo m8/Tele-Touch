@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.cameraView = new Emgu.CV.UI.ImageBox();
             this.label_sicaklik = new System.Windows.Forms.Label();
             this.label_basinc = new System.Windows.Forms.Label();
@@ -66,6 +67,7 @@
             this.sICAKLIKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sENSÖRDATAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fEEDBACKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tESTARAYUZUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button_configuration = new System.Windows.Forms.Button();
             this.progressBar_thumb = new System.Windows.Forms.ProgressBar();
             this.progressBar_index = new System.Windows.Forms.ProgressBar();
@@ -105,7 +107,7 @@
             this.button_save_img = new System.Windows.Forms.Button();
             this.button_clear_thres = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.button_comp_settings = new System.Windows.Forms.Button();
             this.listBox_logger = new System.Windows.Forms.ListBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.chart_sensor_graphics = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -402,7 +404,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sICAKLIKToolStripMenuItem,
             this.sENSÖRDATAToolStripMenuItem,
-            this.fEEDBACKToolStripMenuItem});
+            this.fEEDBACKToolStripMenuItem,
+            this.tESTARAYUZUToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(879, 24);
@@ -427,6 +430,13 @@
             this.fEEDBACKToolStripMenuItem.Name = "fEEDBACKToolStripMenuItem";
             this.fEEDBACKToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
             this.fEEDBACKToolStripMenuItem.Text = "EL BİLGİLERİ";
+            // 
+            // tESTARAYUZUToolStripMenuItem
+            // 
+            this.tESTARAYUZUToolStripMenuItem.Name = "tESTARAYUZUToolStripMenuItem";
+            this.tESTARAYUZUToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.tESTARAYUZUToolStripMenuItem.Text = "TEST ARAYUZU";
+            this.tESTARAYUZUToolStripMenuItem.Click += new System.EventHandler(this.tESTARAYUZUToolStripMenuItem_Click);
             // 
             // button_configuration
             // 
@@ -569,7 +579,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(150, 178);
+            this.textBox2.Location = new System.Drawing.Point(150, 180);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(52, 20);
@@ -825,14 +835,15 @@
             this.button5.Text = "Video Kayıt";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // button_comp_settings
             // 
-            this.button7.Location = new System.Drawing.Point(488, 463);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(163, 23);
-            this.button7.TabIndex = 55;
-            this.button7.Text = "Ayarları Sıfırla";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button_comp_settings.Location = new System.Drawing.Point(488, 463);
+            this.button_comp_settings.Name = "button_comp_settings";
+            this.button_comp_settings.Size = new System.Drawing.Size(163, 23);
+            this.button_comp_settings.TabIndex = 55;
+            this.button_comp_settings.Text = "Gelişmiş Ayarlar";
+            this.button_comp_settings.UseVisualStyleBackColor = true;
+            this.button_comp_settings.Click += new System.EventHandler(this.button_comp_settings_Click);
             // 
             // listBox_logger
             // 
@@ -855,37 +866,37 @@
             // 
             // chart_sensor_graphics
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart_sensor_graphics.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart_sensor_graphics.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart_sensor_graphics.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart_sensor_graphics.Legends.Add(legend2);
             this.chart_sensor_graphics.Location = new System.Drawing.Point(12, 581);
             this.chart_sensor_graphics.Name = "chart_sensor_graphics";
             this.chart_sensor_graphics.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.MarkerBorderColor = System.Drawing.Color.White;
-            series1.MarkerColor = System.Drawing.Color.White;
-            series1.MarkerImageTransparentColor = System.Drawing.Color.White;
-            series1.Name = "Sıcaklık";
-            series1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Nem";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "Basınç";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.Name = "Işık";
-            this.chart_sensor_graphics.Series.Add(series1);
-            this.chart_sensor_graphics.Series.Add(series2);
-            this.chart_sensor_graphics.Series.Add(series3);
-            this.chart_sensor_graphics.Series.Add(series4);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.MarkerBorderColor = System.Drawing.Color.White;
+            series5.MarkerColor = System.Drawing.Color.White;
+            series5.MarkerImageTransparentColor = System.Drawing.Color.White;
+            series5.Name = "Sıcaklık";
+            series5.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Legend = "Legend1";
+            series6.Name = "Nem";
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series7.Legend = "Legend1";
+            series7.Name = "Basınç";
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Legend = "Legend1";
+            series8.Name = "Işık";
+            this.chart_sensor_graphics.Series.Add(series5);
+            this.chart_sensor_graphics.Series.Add(series6);
+            this.chart_sensor_graphics.Series.Add(series7);
+            this.chart_sensor_graphics.Series.Add(series8);
             this.chart_sensor_graphics.Size = new System.Drawing.Size(851, 101);
             this.chart_sensor_graphics.TabIndex = 58;
             this.chart_sensor_graphics.Text = "chart1";
@@ -898,7 +909,7 @@
             this.Controls.Add(this.chart_sensor_graphics);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.listBox_logger);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button_comp_settings);
             this.Controls.Add(this.button_clear_thres);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button_save_img);
@@ -911,6 +922,7 @@
             this.Controls.Add(this.groupBox_tcpsettings);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox_sensor_values);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Teletouch  GUI";
@@ -1014,7 +1026,7 @@
         private System.Windows.Forms.TrackBar trackBar5;
         private System.Windows.Forms.Label label_trackbar6;
         private System.Windows.Forms.Label label_trackbar5;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button_comp_settings;
         private System.Windows.Forms.ListBox listBox_logger;
         private System.Windows.Forms.Button button_get_coordinate;
         private System.Windows.Forms.Button button9;
@@ -1023,6 +1035,7 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_sensor_graphics;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ToolStripMenuItem tESTARAYUZUToolStripMenuItem;
     }
 }
 

@@ -1,6 +1,6 @@
 # Tele-Touch
 
-**Version 1.0.4**
+**Version 1.3.2**
 
 Robotics offers an efficient way for assistive devices to maintain many errands. In this study it is aimed to present a proof of concept robotic study that is called TeleTouch. TeleTouch is a robotic system that allows mimicking user’s finger motions/gestures to be transferred in a desired remote location with in an acceptable delay. In the implementation Leap motion sensor, Raspberry Pi, and Arduino systems are used. 3D printers printed Hand model is actuated by Arduino system which is responsible for driving the servo motors connected the hand model. Raspberry PI is used not only for transferring camera view of the hand model to the controlling remote system but also it is used for transferring to finger attributes to the Arduino system. A software is developed in .Net platform to gather the user’s attributes of the fingers from leap motion sensor system. Delay times of the local and remote system investigated and understood that proposed system successfully transfer motion in almost real time
 
@@ -54,47 +54,37 @@ To use Leap Motion in the project, the C # programming language is preferred. It
 
 ![](http://www.musaunal.com/wp-content/uploads/2018/06/P1.png)
 
+In the project, the Python language is preferred for the program that will run on a Linux(Raspberry Pi) computer for communicating with computer over TCP. The reason for this is that Python is easy to use, has a large user population.
 
+To setup our program to Raspberry Pi you should install OpenCV. After that you can start program like that
 
-
-
-You can control the system like
-```c++
-SET_SERVO(0000000011111111222222223333333344444444555555556666666677777777);
-GO();
+```bash
+workon cv
+cd Desktop `#Your Directory`
+python proje.py
 ```
-## Some models that can be shown
-
-```
-0008800000088000000880008888888888888888000880000008800000088000          => (1/x)^2 + (1/y)^2
-0000000000088000008888000888888008888880008888000008800000000000          => Cylinder
-0000000000000000008888000088880000888800008888000000000000000000          => Square
-8888888886333368863553688630036886300368863333688666666888888888          => (x)^2 + (y)^2
-0000888800008888000088880000888888880000888800008888000088880000          => sign(xy)
-0000000000033000003553000358853003588530003553000003300000000000          => sqrt(1-x^2-y^2)
-0000000003333330035555300358853003588530035335300355553000000000          => pyramid
-```
-
-
 
 ## Built With
 
 * [Arduino](https://www.arduino.cc/) - For Controlling Circuit
 * [.Net](https://docs.microsoft.com/en-gb/dotnet/csharp/programming-guide/) - .Net For GUI
+* [.Python](https://www.python.org/) - For Raspberry Pi
 
 ## Authors
 
 * **Musa Sadık Unal** - *Initial work* - [musaunal.com](http://www.musaunal.com/)
+* **Abdurrahman Unal** - *Initial work"
 * **Ersin Erturk** - *Initial work*
+
 
 ## What We Plan To Do
 
-- [ ] Add Leap Motion Interaction
-- [ ] Eagle Schematic 
-- [ ] Preparing GUI
+- [ ] 3D VR Support
+- [ ] Wrist Servo 
 
 ## Acknowledgments
 
-* Thanks to inFORM team for inspiration  (Especially thanks to Daniel Leithinger)
-* First 3D parts from [*DesignCell*](https://www.thingiverse.com/thing:2038205) 
+* Thanks to Alperen Caliskan for his supports
+
+
 

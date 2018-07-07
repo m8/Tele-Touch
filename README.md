@@ -82,6 +82,9 @@ python proje.py
 - [ ] 3D VR Support
 - [ ] Wrist Servo 
 
+## License
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
 ## Acknowledgments
 
 * Thanks to Alperen Caliskan for his supports
